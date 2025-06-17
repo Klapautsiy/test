@@ -1,0 +1,216 @@
+'configure' configures GNU Midnight Commander 4.8.33-git to adapt to many kinds of systems.
+
+Usage: ./configure [OPTION]... [VAR=VALUE]...
+
+To assign environment variables (e.g., CC, CFLAGS...), specify them as
+VAR=VALUE.  See below for descriptions of some of the useful variables.
+
+Defaults for the options are specified in brackets.
+
+Configuration:
+  -h, --help              display this help and exit
+      --help=short        display options specific to this package
+      --help=recursive    display the short help of all the included packages
+  -V, --version           display version information and exit
+  -q, --quiet, --silent   do not print 'checking ...' messages
+      --cache-file=FILE   cache test results in FILE [disabled]
+  -C, --config-cache      alias for '--cache-file=config.cache'
+  -n, --no-create         do not create output files
+      --srcdir=DIR        find the sources in DIR [configure dir or '..']
+
+Installation directories:
+  --prefix=PREFIX         install architecture-independent files in PREFIX
+                          [/usr/local]
+  --exec-prefix=EPREFIX   install architecture-dependent files in EPREFIX
+                          [PREFIX]
+
+By default, 'make install' will install all the files in
+'/usr/local/bin', '/usr/local/lib' etc.  You can specify
+an installation prefix other than '/usr/local' using '--prefix',
+for instance '--prefix=$HOME'.
+
+For better control, use the options below.
+
+Fine tuning of the installation directories:
+  --bindir=DIR            user executables [EPREFIX/bin]
+  --sbindir=DIR           system admin executables [EPREFIX/sbin]
+  --libexecdir=DIR        program executables [EPREFIX/libexec]
+  --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
+  --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
+  --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
+  --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
+  --libdir=DIR            object code libraries [EPREFIX/lib]
+  --includedir=DIR        C header files [PREFIX/include]
+  --oldincludedir=DIR     C header files for non-gcc [/usr/include]
+  --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
+  --datadir=DIR           read-only architecture-independent data [DATAROOTDIR]
+  --infodir=DIR           info documentation [DATAROOTDIR/info]
+  --localedir=DIR         locale-dependent data [DATAROOTDIR/locale]
+  --mandir=DIR            man documentation [DATAROOTDIR/man]
+  --docdir=DIR            documentation root [DATAROOTDIR/doc/mc]
+  --htmldir=DIR           html documentation [DOCDIR]
+  --dvidir=DIR            dvi documentation [DOCDIR]
+  --pdfdir=DIR            pdf documentation [DOCDIR]
+  --psdir=DIR             ps documentation [DOCDIR]
+
+Program names:
+  --program-prefix=PREFIX            prepend PREFIX to installed program names
+  --program-suffix=SUFFIX            append SUFFIX to installed program names
+  --program-transform-name=PROGRAM   run sed PROGRAM on installed program names
+
+X features:
+  --x-includes=DIR    X include files are in DIR
+  --x-libraries=DIR   X library files are in DIR
+
+System types:
+  --build=BUILD     configure for building on BUILD [guessed]
+  --host=HOST       cross-compile to build programs to run on HOST [BUILD]
+
+Optional Features:
+  --disable-option-checking  ignore unrecognized --enable/--with options
+  --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --enable-silent-rules   less verbose build output (undo: "make V=1")
+  --disable-silent-rules  verbose build output (undo: "make V=0")
+  --enable-maintainer-mode
+                          enable make rules and dependencies not useful (and
+                          sometimes confusing) to the casual installer
+  --enable-dependency-tracking
+                          do not reject slow dependency extractors
+  --disable-dependency-tracking
+                          speeds up one-time build
+  --enable-werror         Handle all compiler warnings as errors
+  --enable-shared[=PKGS]  build shared libraries [default=yes]
+  --enable-static[=PKGS]  build static libraries [default=yes]
+  --enable-pic[=PKGS]     try to use only PIC/non-PIC objects [default=use
+                          both]
+  --enable-fast-install[=PKGS]
+                          optimize for fast installation [default=yes]
+  --enable-aix-soname=aix|svr4|both
+                          shared library versioning (aka "SONAME") variant to
+                          provide on AIX, [default=aix].
+  --disable-libtool-lock  avoid locking (might break parallel builds)
+  --enable-tests          Enable unit tests (see
+                          http://libcheck.github.io/check/) [auto]
+
+  --disable-largefile     omit support for large files
+  --disable-nls           do not use Native Language Support
+  --disable-rpath         do not hardcode runtime library paths
+  --enable-charset        Support for charset selection and conversion [yes]
+  --enable-mclib          Compile shared library libmc.so [no]
+  --enable-assert         turn on assertions [yes]
+  --enable-aspell[=prefix]
+                          Enable aspell support for internal editor [no] and
+                          optionally set path to aspell installation prefix
+                          [default=/usr]
+  --enable-background     Support for background file operations [yes]
+  --disable-vfs           Disable VFS
+  --enable-vfs-cpio       Support for cpio filesystem [yes]
+  --enable-vfs-extfs      Support for extfs filesystem [yes]
+  --enable-vfs-shell      Support for SHELL filesystem [yes]
+  --enable-vfs-ftp        Support for FTP filesystem [yes]
+  --enable-vfs-sfs        Support for sfs filesystem [yes]
+  --enable-vfs-sftp       Support for SFTP filesystem [auto]
+  --enable-vfs-tar        Support for tar filesystem [yes]
+  --enable-vfs-undelfs    Support for ext2 undelete filesystem [no]
+  --disable-doxygen-doc   don't generate any doxygen documentation
+  --disable-doxygen-dot   don't generate graphics for doxygen documentation
+  --enable-doxygen-man    generate doxygen manual pages
+  --enable-doxygen-rtf    generate doxygen RTF documentation
+  --enable-doxygen-xml    generate doxygen XML documentation
+  --enable-doxygen-chm    generate doxygen compressed HTML help documentation
+  --enable-doxygen-chi    generate doxygen separate compressed HTML help index
+                          file
+  --disable-doxygen-html  don't generate doxygen plain HTML documentation
+  --enable-doxygen-ps     generate doxygen PostScript documentation
+  --enable-doxygen-pdf    generate doxygen PDF documentation
+  --enable-configure-args Embed ./configure arguments into binaries
+  --enable-year2038       support timestamps after 2038
+
+Optional Packages:
+  --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+  --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+  --with-gnu-ld           assume the C compiler uses GNU ld [default=no]
+  --with-sysroot[=DIR]    Search for dependent libraries within DIR (or the
+                          compiler's sysroot if not specified).
+  --with-glib-static      Link glib statically [no]
+  --with-screen=[LIB]     Compile with screen library: slang or ncurses [slang
+                          if found]
+  --with-ncurses-includes=[DIR]
+                          set path to ncurses includes [default=/usr/include];
+                          make sense only if --with-screen=ncurses; for
+                          /usr/local/include/ncurses specify
+                          /usr/local/include
+  --with-ncurses-libs=[DIR]
+                          set path to ncurses library [default=/usr/lib]; make
+                          sense only if --with-screen=ncurses
+  --with-search-engine=type
+                          Select low-level search engine [glib|pcre|pcre2]
+
+  --with-pcre[=prefix]    compile xmlpcre part (via libpcre check)
+  --with-pcre2=DIR        root directory path of PCRE2 installation [defaults to
+                          /usr/local or /usr if not found in /usr/local]
+  --without-pcre2         to disable PCRE2 usage completely
+  --with-x                use the X Window System
+  --with-gnu-ld           assume the C compiler uses GNU ld [default=no]
+  --with-libiconv-prefix[=DIR]  search for libiconv in DIR/include and DIR/lib
+  --without-libiconv-prefix     don't search for libiconv in includedir and libdir
+  --with-libintl-prefix[=DIR]  search for libintl in DIR/include and DIR/lib
+  --without-libintl-prefix     don't search for libintl in includedir and libdir
+  --with-gpm-mouse        Compile with gpm mouse support (Linux only) [yes if
+                          found]
+  --with-internal-edit    Enable internal editor [yes]
+  --with-diff-viewer      Compile with diff viewer [yes]
+  --with-subshell          Compile in concurrent subshell [yes]
+  --with-subshell=optional Don't run concurrent shell by default [no]
+
+Some influential environment variables:
+  CC          C compiler command
+  CFLAGS      C compiler flags
+  LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
+              nonstandard directory <lib dir>
+  LIBS        libraries to pass to the linker, e.g. -l<library>
+  CPPFLAGS    (Objective) C/C++ preprocessor flags, e.g. -I<include dir> if
+              you have headers in a nonstandard directory <include dir>
+  LT_SYS_LIBRARY_PATH
+              User-defined run-time library search path.
+  PKG_CONFIG  path to pkg-config utility
+  PKG_CONFIG_PATH
+              directories to add to pkg-config's search path
+  PKG_CONFIG_LIBDIR
+              path overriding pkg-config's built-in search path
+  CHECK_CFLAGS
+              C compiler flags for CHECK, overriding pkg-config
+  CHECK_LIBS  linker flags for CHECK, overriding pkg-config
+  GLIB_CFLAGS C compiler flags for GLIB, overriding pkg-config
+  GLIB_LIBS   linker flags for GLIB, overriding pkg-config
+  GMODULE_CFLAGS
+              C compiler flags for GMODULE, overriding pkg-config
+  GMODULE_LIBS
+              linker flags for GMODULE, overriding pkg-config
+  SLANG_CFLAGS
+              C compiler flags for SLANG, overriding pkg-config
+  SLANG_LIBS  linker flags for SLANG, overriding pkg-config
+  CPP         C preprocessor
+  XMKMF       Path to xmkmf, Makefile generator for X Window System
+  EXT2FS_CFLAGS
+              C compiler flags for EXT2FS, overriding pkg-config
+  EXT2FS_LIBS linker flags for EXT2FS, overriding pkg-config
+  E2P_CFLAGS  C compiler flags for E2P, overriding pkg-config
+  E2P_LIBS    linker flags for E2P, overriding pkg-config
+  LIBSSH_CFLAGS
+              C compiler flags for LIBSSH, overriding pkg-config
+  LIBSSH_LIBS linker flags for LIBSSH, overriding pkg-config
+  COM_ERR_CFLAGS
+              C compiler flags for COM_ERR, overriding pkg-config
+  COM_ERR_LIBS
+              linker flags for COM_ERR, overriding pkg-config
+  DOXYGEN_PAPER_SIZE
+              a4wide (default), a4, letter, legal or executive
+
+Use these variables to override the choices made by 'configure' or to help
+it to find libraries and programs with nonstandard names/locations.
+
+Report bugs to <https://www.midnight-commander.org/wiki/NewTicket>.
+GNU Midnight Commander home page: <https://www.midnight-commander.org/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
